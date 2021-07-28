@@ -6,6 +6,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   actionlib_msgs
   geometry_msgs
+  geographic_msgs
   message_generation
   std_msgs
   nav_msgs
@@ -29,6 +30,7 @@ find_package(catkin REQUIRED COMPONENTS
  add_action_files(
    FILES
    CartesianPath.action
+   GPSPath.action
  )
 
 ## Generate added messages and services with any dependencies listed here
@@ -36,6 +38,7 @@ find_package(catkin REQUIRED COMPONENTS
    DEPENDENCIES
    actionlib_msgs
    geometry_msgs
+   geographic_msgs
    std_msgs
    nav_msgs
  )
@@ -49,7 +52,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES autopilot_msgs
-  CATKIN_DEPENDS actionlib_msgs geometry_msgs message_generation std_msgs nav_msgs
+  CATKIN_DEPENDS actionlib_msgs geometry_msgs geographic_msgs message_generation std_msgs nav_msgs
 #  DEPENDS system_lib
 )
 

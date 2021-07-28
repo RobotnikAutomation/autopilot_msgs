@@ -1,0 +1,8 @@
+# goal
+geographic_msgs/GeoPoint[] waypoints
+---
+# result
+bool success
+string description
+---
+# feedback
