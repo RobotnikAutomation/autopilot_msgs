@@ -1,0 +1,10 @@
+# goal
+nav_msgs/Path path
+---
+# result
+bool success
+string description
+---
+# feedback
+geometry_msgs/PoseWithCovariance current_pose
+geometry_msgs/TwistWithCovariance current_velocity
