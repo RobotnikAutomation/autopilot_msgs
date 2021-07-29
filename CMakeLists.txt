@@ -30,7 +30,11 @@ find_package(catkin REQUIRED COMPONENTS
  add_action_files(
    FILES
    CartesianPath.action
+   CartesianWaypoints.action
+   CartesianGoal.action
    GPSPath.action
+   GPSWaypoints.action
+   GPSGoal.action
  )
 
 ## Generate added messages and services with any dependencies listed here
