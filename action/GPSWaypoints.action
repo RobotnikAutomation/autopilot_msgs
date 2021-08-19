@@ -1,5 +1,5 @@
 # goal
-geographic_msgs/GeoPoint[] waypoints
+geographic_msgs/GeoPath waypoints
 ---
 # result
 bool success

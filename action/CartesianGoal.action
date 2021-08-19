@@ -1,5 +1,5 @@
 # goal
-geometry_msgs/PoseStamped waypoints
+geometry_msgs/PoseStamped target
 ---
 # result
 bool success

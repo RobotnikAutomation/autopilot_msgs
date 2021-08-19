@@ -1,5 +1,5 @@
 # goal
-geometry_msgs/PoseStamped[] waypoints
+nav_msgs/Path waypoints
 ---
 # result
 bool success
