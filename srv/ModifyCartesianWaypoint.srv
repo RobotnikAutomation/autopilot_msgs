@@ -1,0 +1,8 @@
+# request
+bool remove
+int32 index
+geometry_msgs/Pose new_pose
+---
+# response
+bool success
+string description
