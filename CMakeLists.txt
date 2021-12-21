@@ -23,6 +23,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
     DIRECTORY srv
     FILES
+    CallOpenRouteService.srv
     ModifyGPSWaypoint.srv
     ModifyCartesianWaypoint.srv
 )
