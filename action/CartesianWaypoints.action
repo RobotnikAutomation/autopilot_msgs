@@ -1,0 +1,8 @@
+# goal
+nav_msgs/Path waypoints
+---
+# result
+bool success
+string description
+---
+# feedback
