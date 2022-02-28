@@ -24,6 +24,7 @@ add_service_files(
     DIRECTORY srv
     FILES
     CallOpenRouteService.srv
+    CallOSRMService.srv
     ModifyGPSWaypoint.srv
     ModifyCartesianWaypoint.srv
 )
