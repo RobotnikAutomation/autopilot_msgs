@@ -1,5 +1,5 @@
 # goal
-geographic_msgs/GeoPath waypoints
+autopilot_msgs/AutopilotGeoPath waypoints
 ---
 # result
 bool success

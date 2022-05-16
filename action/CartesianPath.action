@@ -1,5 +1,5 @@
 # goal
-nav_msgs/Path path
+autopilot_msgs/AutopilotPath path
 ---
 # result
 bool success

@@ -1,3 +1,2 @@
-std_msgs/Header header
-geometry_msgs/Pose pose
+geometry_msgs/PoseStamped pose
 bool visited
