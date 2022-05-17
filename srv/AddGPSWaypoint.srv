@@ -1,0 +1,6 @@
+# request
+geographic_msgs/GeoPose new_pose
+---
+# response
+bool success
+string description
