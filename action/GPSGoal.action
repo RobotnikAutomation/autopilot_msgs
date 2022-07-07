@@ -1,5 +1,7 @@
 # goal
 geographic_msgs/GeoPoint target
+bool start_from_previous_point
+geographic_msgs/GeoPoint previous_point
 ---
 # result
 bool success

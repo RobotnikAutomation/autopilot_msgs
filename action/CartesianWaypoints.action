@@ -1,5 +1,5 @@
 # goal
-nav_msgs/Path waypoints
+autopilot_msgs/AutopilotPath waypoints
 ---
 # result
 bool success

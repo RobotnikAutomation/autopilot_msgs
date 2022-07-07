@@ -4,4 +4,4 @@ geographic_msgs/GeoPoint init
 geographic_msgs/GeoPoint target
 ---
 # result
-geographic_msgs/GeoPath waypoints
+autopilot_msgs/AutopilotGeoPath waypoints

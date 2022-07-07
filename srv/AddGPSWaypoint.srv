@@ -1,8 +1,4 @@
 # request
-bool remove
-bool add
-string place
-int32 index
 geographic_msgs/GeoPose new_pose
 ---
 # response
