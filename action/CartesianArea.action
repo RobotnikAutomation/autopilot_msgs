@@ -1,5 +1,6 @@
 # goal
-geometry_msgs/PolygonStamped target
+geometry_msgs/PolygonStamped outter_polygon
+geometry_msgs/PolygonStamped[] inner_polygons
 ---
 # result
 bool success
