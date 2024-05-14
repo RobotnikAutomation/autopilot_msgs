@@ -42,6 +42,7 @@ add_service_files(
    GPSPath.action
    GPSWaypoints.action
    GPSGoal.action
+   SetTargetWaypoint.action
  )
 
 ## Generate added messages and services with any dependencies listed here
