@@ -1,5 +1,6 @@
 # goal
 autopilot_msgs/AutopilotPath path
+bool autocontinue
 ---
 # result
 bool success
