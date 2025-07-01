@@ -1,70 +1,59 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(autopilot_msgs)
 
-add_compile_options(-std=c++11)
+# Default to C99
+if(NOT CMAKE_C_STANDARD)
+  set(CMAKE_C_STANDARD 99)
+endif()
 
-find_package(catkin REQUIRED COMPONENTS
-  actionlib_msgs
-  geometry_msgs
-  geographic_msgs
-  message_generation
-  std_msgs
-  nav_msgs
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+# find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(geographic_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+# uncomment the following section in order to fill in
+# further dependencies manually.
+# find_package(<dependency> REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/AutopilotGeoPath.msg"
+  "msg/AutopilotGeoPoseStamped.msg"
+  "msg/AutopilotPath.msg"
+  "msg/AutopilotPoseStamped.msg"
+  "srv/CallOpenRouteService.srv"
+  "srv/CallOSRMService.srv"
+  "srv/ModifyGPSWaypoint.srv"
+  "srv/AddGPSWaypoint.srv"
+  "srv/ModifyCartesianWaypoint.srv"
+  "action/CartesianPath.action"
+  "action/CartesianWaypoints.action"
+  "action/CartesianGoal.action"
+  "action/GPSPath.action"
+  "action/GPSWaypoints.action"
+  "action/GPSGoal.action"
+  DEPENDENCIES geometry_msgs geographic_msgs std_msgs nav_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
 )
 
-## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-   AutopilotGeoPath.msg
-   AutopilotGeoPoseStamped.msg
-   AutopilotPath.msg
-   AutopilotPoseStamped.msg
- )
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # uncomment the line when a copyright and license is not present in all source files
+  #set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # uncomment the line when this package is not in a git repo
+  #set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
-## Generate services in the 'srv' folder
-add_service_files(
-    DIRECTORY srv
-    FILES
-    CallOpenRouteService.srv
-    CallOSRMService.srv
-    ModifyGPSWaypoint.srv
-    AddGPSWaypoint.srv
-    ModifyCartesianWaypoint.srv
-)
-
-## Generate actions in the 'action' folder
- add_action_files(
-   FILES
-   CartesianPath.action
-   CartesianWaypoints.action
-   CartesianGoal.action
-   GPSPath.action
-   GPSWaypoints.action
-   GPSGoal.action
- )
-
-## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   actionlib_msgs
-   geometry_msgs
-   geographic_msgs
-   std_msgs
-   nav_msgs
- )
-
-## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
-#   cfg/DynReconf2.cfg
-# )
-
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES autopilot_msgs
-  CATKIN_DEPENDS actionlib_msgs geometry_msgs geographic_msgs message_generation std_msgs nav_msgs
-#  DEPENDS system_lib
-)
-
-include_directories(
-)
+ament_package()

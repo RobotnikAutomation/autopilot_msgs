@@ -2,7 +2,6 @@
 geometry_msgs/PoseStamped target
 ---
 # result
-bool success
 string description
 ---
 # feedback

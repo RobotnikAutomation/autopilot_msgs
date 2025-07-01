@@ -1,5 +1,5 @@
 # goal
-string ORS_key
+string ors_key
 geographic_msgs/GeoPoint init
 geographic_msgs/GeoPoint target
 ---

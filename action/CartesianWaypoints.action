@@ -2,7 +2,6 @@
 autopilot_msgs/AutopilotPath waypoints
 ---
 # result
-bool success
 string description
 ---
 # feedback
