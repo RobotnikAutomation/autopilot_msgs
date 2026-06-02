@@ -19,6 +19,8 @@ find_package(catkin REQUIRED COMPONENTS
    AutopilotGeoPoseStamped.msg
    AutopilotPath.msg
    AutopilotPoseStamped.msg
+   AutopilotPoseStampedExtended.msg
+   AutopilotPathExtended.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -42,6 +44,7 @@ add_service_files(
    GPSPath.action
    GPSWaypoints.action
    GPSGoal.action
+   SetTargetWaypoint.action
  )
 
 ## Generate added messages and services with any dependencies listed here

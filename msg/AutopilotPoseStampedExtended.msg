@@ -1,0 +1,2 @@
+autopilot_msgs/AutopilotPoseStamped pose
+bool connect_with_next_point
